@@ -164,6 +164,28 @@ section[data-menu="visible"] {
 	margin-right:50px;
 
 }
-.navbarFooter > ul,li{
+.footer-navbar-ul-style  {
+	list-style: none;
+	font-size: 16px;
+	color:hsl(220,45%,80%);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  padding-bottom: 10px;
 
+}
+.hoverMouse:hover{
+	transition: all 0.5s ease-out;
+	background-color: rgba(255, 255, 255, 0.1); 
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.mainFooterBot{
+	background-color: hsl(220, 20%, 6%);
+	margin: 32px;
+	width: 100%;
+}
+#listSpriteFooter{
+	display: flex;
+	gap: 10px;
+	list-style: none;
 }

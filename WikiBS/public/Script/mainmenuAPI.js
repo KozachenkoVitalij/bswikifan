@@ -45,12 +45,14 @@ fetch('../template/footerTemp/footerTemp.html')
             })
             .catch(err => console.log('Error loading footerTemp.html: ', err));
 
-fetch("../template/test-footage-foto-gallery-bs-1.html")
-    .then(response => response.text())
-    .then(data =>{
-        document.getElementById("foto-gallery").innerHTML = data;
-    })
-    .catch(err => console.log('Error loading footerTemp.html: ', err));
+fetch('../template/bar-tool.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('template-bar-tools').innerHTML = data;
+            })
+            .catch(err => console.log('Error loading barTemp.html: ', err));
+
+
 
 
 function toggleMenu() {
@@ -65,4 +67,17 @@ function toggleMenu() {
     } else {
         console.error('Меню не знайдено!');
     }
+}
+function toggleMore(){
+  const more = document.querySelector(".button-more-tools")
+
+  if (more) {
+    if (more.getAttribute('data-more') === 'hidden') {
+      more.setAttribute('data-more', 'visible')
+    }else{
+      more.setAttribute('data-more','hidden')
+    }
+  }else{
+     console.error('More не знайдено!');
+  }
 }

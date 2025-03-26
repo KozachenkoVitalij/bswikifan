@@ -194,17 +194,20 @@ hr{
 	width: 40px;
 	height: 40px;
 	background-color:  transparent;
+	border: none;
 	text-align: center;
+	padding-left:0;
+}
+.toolsButton:hover{
+	background-color: hsl(220deg 13.79% 19.88%);
+	border-radius: 10px;
 }
 .iconTool{
 	width: 30px;
 	height: 30px;
 	margin: 5px;
 }
-.toolsButton:hover{
-	background-color: hsl(220deg 13.79% 19.88%);
-	border-radius: 10px;
-}
+
 #listToolsWiki{
 	list-style: none;
 	background-color: transparent;
@@ -218,32 +221,51 @@ hr{
 	background-color: hsl(220deg 13.79% 19.88%);
 	border-radius: 10px;
 }
-
-.footer-navbar-ul-style  {
-	list-style: none;
-	font-size: 16px;
-	color:hsl(220,45%,80%);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  border-radius: 5px;
-  padding-bottom: 10px;
+.button-more-tools-container{
+	width: 1100px;
+	height: 10px;
+	display: grid;
+	justify-items: center;
 
 }
-.hoverMouse:hover{
-	transition: all 0.5s ease-out;
-	background-color: rgba(255, 255, 255, 0.1); 
-  transform: scale(1.1);
-  cursor: pointer;
+.button-more-tools{
+	margin-left: 180px;
+	width: 300px;
+	border-radius: 15px;
+	border: solid 0.5px rgb(73, 0, 83);
+	height: fit-content;
+	background-color: rgb(255 255 255 / 5%);
+	backdrop-filter: blur(10px);
+	z-index: 1;
+	display: none;
 }
-.mainFooterBot{
-	background-color: hsl(220, 20%, 6%);
-	margin: 32px;
-	width: 100%;
-}
-#listSpriteFooter{
-	display: flex;
-	gap: 10px;
+.more-li-img-style{
 	list-style: none;
+	ul{
+		margin: 0;
+	}
+	li{
+		display: flex;
+	}
+	p{
+	font-size: 14px;
+	color: hsl(220,45%,80%) ;
+	}
+	img{
+  margin-top: 10px;
+  margin-right: 15px;
+	width: 20px;
+	height: 20px;
+	}
 }
+div[data-more="hidden"] {
+    display: none;
+}
+
+div[data-more="visible"] {
+    display: block;
+}
+
 /////////////////
 .list-text{
 	font-size: 14px;
