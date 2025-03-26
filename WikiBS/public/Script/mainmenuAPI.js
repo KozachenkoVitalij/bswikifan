@@ -81,3 +81,16 @@ function toggleMore(){
      console.error('More не знайдено!');
   }
 }
+function toggleSetting(){
+  const setting = document.querySelector(".setting-tools")
+
+  if (setting) {
+    if (setting.getAttribute('data-setting') === 'hidden') {
+      setting.setAttribute('data-setting', 'visible')
+    }else{
+      setting.setAttribute('data-setting','hidden')
+    }
+  }else{
+     console.error('More не знайдено!');
+  }
+}

@@ -116,16 +116,61 @@ section[data-menu="visible"] {
 		color: white;
 	}
 }
+.setting-tools {
+    width: 300px; /* Фіксована ширина */
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    margin-left: 75px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: solid 0.5px darkred;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    h {
+    color:  hsl(220,35%,65%);
+    font-size: 18px;
+    padding: 10px 0;
+}
+}
 
 
 
+.div-grid {
+    display: flex;
+    width: 100%; 
+    gap: 5px; 
+}
 
+.div-grid button {
+    flex: 1 1 auto; 
+    min-width: fit-content; 
+    padding: 10px 15px;
+    height: 45px;
+    background-color: #14161e;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+}
 
+.div-grid button.active {
+    border-color: #007bff;
+    background-color: rgba(0, 123, 255, 0.2);
+}
 
-
-
-
-
+div[data-setting = 'hidden']
+{
+	display: none;
+}
+div[data-setting = 'visible']
+{
+	display: block;
+}
 
 
 
