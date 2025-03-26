@@ -1,0 +1,253 @@
+html{
+	scroll-behavior: smooth;
+}
+body{
+	background-color: #14161e;
+	font-family: Roboto Flex;
+	max-width: 100vw;
+	overflow-x:hidden ;
+	margin: 0;
+}
+#spoiler{
+	color: hsl(220,45%,80%);
+	text-align: center;
+	font-size: 14px;
+}
+h1 , h3 , h4, h6, h7 , h8{
+	display: block;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+
+}
+h7{
+	margin-bottom: 35px;
+}
+.age18red:hover{
+	color: red;
+}
+p1{
+	color: hsl(220,35%,65%);
+	font-size: 16px;
+	display: block;
+}
+#mainmenu{
+	display: block;
+	margin: 0 auto;
+}
+#aliceButton{
+	display: block;
+	margin: 25px auto;
+	background-color:rgb(140 47 181);
+	border-radius: 50px;
+	color:white;
+	width: 100px;
+	font-family: monospace;
+
+}
+#listSprite1{
+	display: flex;
+	gap: 10px;
+	list-style: none;
+	padding: 0;
+	justify-content: center	;
+}
+.listSpriteAndSpoiler{
+	display: block;
+	margin: 15px auto;
+	border-bottom: solid 3px dimgray;	
+	border-top: solid 3px dimgray;
+}	
+.prologueMainmenu{
+	display: block;
+	border-bottom: solid 3px dimgray;
+}
+#prologueText{
+	margin-bottom: 15px;
+	height: 260px;
+	font-size: 17px;
+	text-align: left;
+	padding-right: 70px;
+	padding-bottom: 0 ;
+	color: rgb(200, 255, 254);
+}	
+.prologueTextImgDiv{
+	height: 250px;
+}
+a {
+	text-decoration: none; 
+}
+.redHref{
+	color: rgb(190, 0, 72);
+	font-weight: bold;
+}
+.blueHref{
+	color:rgb(1, 140, 188);
+	font-weight: bold;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+.photo-gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	gap: 10px;
+	justify-items: center;
+	margin-top:10px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom:4px solid dimgray;
+}
+
+.photo-item {
+	text-align: center;
+}
+
+.photo-item > img {
+
+	margin: 10px auto;
+	text-align: center;
+	width: 125px;
+	height: 125px;
+
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для фото */
+}
+
+.photo-item p {
+	font-size: 16px;
+	margin-top: 18px;
+	color: hsl(220,45%,80%);
+}
+
+span{
+	margin-bottom: 20px;
+	width: 160px;
+	height: 160px;
+	background-color: rgb(255 255 255 / 5%);
+}
+main{
+	width: 1100px;
+	height: fit-content;
+	margin: 0 auto;
+}
+#lastFoto{
+	margin-left: 920px;
+}
+.buttonBS1andBS2 > button{
+	color: hsl(220,45%,80%);
+	background-color:  transparent;
+	border: none;	
+	font-size: 14px;
+	width: fit-content;
+	height: 50px;
+	font-weight: bold;
+}
+.buttonBS1andBS2> button:hover{
+	border-bottom: solid 1px blue;
+	color: hsl(220,45%,80%);
+}
+.navList{
+	margin-bottom: 20px;
+	list-style: none;
+	font-size: 20px;
+	color:hsl(220,45%,80%);
+}
+
+.communityInfo{
+	height: 340px;
+	background-image: url("communityBackground.png");
+}
+.communityInfo {
+	padding-top:15px ;
+	font-size: 20px;
+	font-family: monospace;
+	text-align: center;
+	color: hsl(220,45%,80%);
+}
+.manualHref{
+	display: inline-block;
+	background-color: transparent;
+	width: auto;
+	height: auto;
+	justify-items: center;
+	justify-content: center;
+}
+.Wiki{
+	padding-top: 20px;
+	padding-bottom: 60px;
+}
+hr{
+	padding-top: 40px	;
+	border: none;
+	border-bottom: solid 0.5px rgb(255 255 255 / 5%);
+}
+.wikiTools{
+	display: flex;
+	margin: 0 auto;
+	text-align: center;
+	justify-items: center;
+	justify-content: center;
+}
+.toolsButton{
+	width: 40px;
+	height: 40px;
+	background-color:  transparent;
+	text-align: center;
+}
+.iconTool{
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+}
+.toolsButton:hover{
+	background-color: hsl(220deg 13.79% 19.88%);
+	border-radius: 10px;
+}
+#listToolsWiki{
+	list-style: none;
+	background-color: transparent;
+	width: auto;
+	height: 40px;
+	display: flex;
+	margin: 0px;
+	padding: 0;
+}
+#listToolsWiki > span:hover{
+	background-color: hsl(220deg 13.79% 19.88%);
+	border-radius: 10px;
+}
+
+.footer-navbar-ul-style  {
+	list-style: none;
+	font-size: 16px;
+	color:hsl(220,45%,80%);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  padding-bottom: 10px;
+
+}
+.hoverMouse:hover{
+	transition: all 0.5s ease-out;
+	background-color: rgba(255, 255, 255, 0.1); 
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.mainFooterBot{
+	background-color: hsl(220, 20%, 6%);
+	margin: 32px;
+	width: 100%;
+}
+#listSpriteFooter{
+	display: flex;
+	gap: 10px;
+	list-style: none;
+}
+/////////////////
+.list-text{
+	font-size: 14px;
+	margin-bottom: 20px;
+	list-style: none;
+	color:hsl(220,45%,80%);
+}
