@@ -1,3 +1,13 @@
+<div class="search-container">
+    <div class="search-tools" data-search = 'hidden' data-search = 'visible'>
+        <div class="input-flex">
+          <img class="iconTools hoverMouse" src="../template/templateFoto/loop.png">
+          <input class="search-input" type="text" name="Search">
+          <a href="#" id="random-link" onclick="toggleRandomPageHref()"><img class="hoverMouse" src="../images/toolsIcon/cube-icon.png"></a>
+        </div>
+    </div>
+</div>
+
 <section class="menu-bar-container" data-menu = "hidden" data-menu= "visible">
         <div class="menu-bar-style">
           <div>
@@ -35,8 +45,10 @@
       <div class="headerToolsImages hoverMouse">
         <a href="../bswikifan.html"><img class="iconTools hoverIcon" src="../template/templateFoto/iconwiki.gif" data-original ="../template/templateFoto/iconwiki.gif" data-hover ="../template/templateFoto/homeIcon.png"/> </a>
       </div> 
-      <div class="headerToolsImages hoverMouse">    
+      <div class="headerToolsImages hoverMouse">  
+      <button class="menu-button-header" onclick="toggleSearch()"> 
         <img src="../template/templateFoto/loop.png">
+      </button>
       </div> 
       <div class="headerToolsImages hoverMouse" >
         <button class="menu-button-header" onclick="toggleMenu()">
@@ -57,35 +69,34 @@
      </section>    
 
 </header> 
-     <div class="setting-tools-contaoner">
-        <div class="setting-tools" data-setting= "hidden" data-setting= "visible">
-          <h>Text</h>
-            <div class="div-grid">
-              
-              <button>Small</button>
-              <button>Standart</button>
-              <button>Large</button>
-            </div>
-            <h>Color</h>
-            <div class="div-grid">
-              
-              <button>Auto</button>
-              <button>Light</button>
-              <button>Dark</button>
-            </div>
-              <h>Width</h>
-            <div class="div-grid">
-            
-              <button>Standart</button>
-              <button>Wide</button>
-              <button>Full</button>
-            </div>
-             <h>Pure Black mode</h>
-            <div class="div-grid">
-             
-              <button>Off</button>
-              <button>On</button>
-            </div>
-        </div>          
+<div class="setting-tools-contaoner">
+  <div class="setting-tools" data-setting= "hidden" data-setting= "visible">
+    <h>Text</h>
+      <div class="div-grid">
+        
+        <button>Small</button>
+        <button>Standart</button>
+        <button>Large</button>
+      </div>
+      <h>Color</h>
+      <div class="div-grid">
+        
+        <button>Auto</button>
+        <button>Light</button>
+        <button>Dark</button>
+      </div>
+        <h>Width</h>
+      <div class="div-grid">
+      
+        <button>Standart</button>
+        <button>Wide</button>
+        <button>Full</button>
+      </div>
+       <h>Pure Black mode</h>
+      <div class="div-grid">
        
-     </div>
+        <button>Off</button>
+        <button>On</button>
+      </div>
+  </div>          
+</div>
