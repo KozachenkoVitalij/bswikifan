@@ -46,7 +46,6 @@
 	border-radius: 15px;
 	border: solid 0.5px rgb(63, 28, 48);
 	backdrop-filter: blur(10px);
-
 }
 
 section[data-menu="hidden"] {

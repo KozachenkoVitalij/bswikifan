@@ -103,23 +103,27 @@ a:hover {
 
 .photo-item {
 	text-align: center;
-}
+	
+	img{
 
-.photo-item > img {
-
-	margin: 10px auto;
 	text-align: center;
 	width: 125px;
 	height: 125px;
-
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для фото */
-}
-
-.photo-item p {
+	box-shadow: 10px 10px 20px rgba(0, 0, 0); /* Тінь для фото */}
+	}
+	a >  img {
+	text-align: center;
+	width: 125px;
+	height: 125px;
+	
+	}
+	p {
 	font-size: 16px;
 	margin-top: 18px;
 	color: hsl(220,45%,80%);
+	}
 }
+
 
 span{
 	margin-bottom: 20px;

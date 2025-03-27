@@ -19,7 +19,9 @@ app.get('/footerTemp', (req, res) => {
 app.get('/black-souls-about', (req, res) => {
     res.sendFile(path.join(__dirname, 'WikiBS/public/htmlHrefTitle/black-souls-about.html'));
 });
-
+app.get('/alice-about', (req, res) =>{
+    res.sendFile(path.join(__dirname,'WikiBS/public/htmlHrefTitle/alica-about.html'));
+});
 app.listen(port, () => {
     console.log(`Сервер запущено на http://localhost:${port}`);
 });

@@ -35,22 +35,23 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
-});
-
-
-fetch('../template/footerTemp/footerTemp.html')
+  fetch('../template/footerTemp/footerTemp.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
             })
             .catch(err => console.log('Error loading footerTemp.html: ', err));
 
-fetch('../template/bar-tool.html')
+  fetch('../template/bar-tool.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('template-bar-tools').innerHTML = data;
             })
             .catch(err => console.log('Error loading barTemp.html: ', err));
+});
+
+
+
 
 
 
@@ -94,3 +95,20 @@ function toggleSetting(){
      console.error('More не знайдено!');
   }
 }
+
+function toggleRandomPageHref(){
+  const hrefPage = document.getElementById('random-link')
+
+  const pages = [
+    '/bswikifan.html',
+    '../htmlHrefTitle/black-souls-about.html',
+    '../htmlHrefTitle/alica-about.html'
+  ];
+
+   const randomPage = pages[Math.floor(Math.random() * pages.length)];
+
+            // Переходимо на обрану сторінку
+            window.location.href = randomPage;
+  console.log(randomPage);
+}
+
