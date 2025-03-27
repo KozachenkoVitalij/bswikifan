@@ -22,6 +22,9 @@ app.get('/black-souls-about', (req, res) => {
 app.get('/alice-about', (req, res) =>{
     res.sendFile(path.join(__dirname,'WikiBS/public/htmlHrefTitle/alica-about.html'));
 });
+app.get('/red-hood', (req,res) =>{
+    res.sendFile(path.join(__dirname,'WikiBS/public/htmlHrefTitle/red-hood.html'));
+});
 app.listen(port, () => {
     console.log(`Сервер запущено на http://localhost:${port}`);
 });

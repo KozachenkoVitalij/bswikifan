@@ -102,7 +102,8 @@ function toggleRandomPageHref(){
   const pages = [
     '/bswikifan.html',
     '../htmlHrefTitle/black-souls-about.html',
-    '../htmlHrefTitle/alica-about.html'
+    '../htmlHrefTitle/alica-about.html',
+    '../htmlHrefTitle/red-hood.html'
   ];
 
    const randomPage = pages[Math.floor(Math.random() * pages.length)];

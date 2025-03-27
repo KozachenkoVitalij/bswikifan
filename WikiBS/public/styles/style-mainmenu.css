@@ -149,8 +149,11 @@ main{
 	font-weight: bold;
 }
 .buttonBS1andBS2> button:hover{
+	background-color: hsl(220deg 13.79% 19.88%);
 	border-bottom: solid 1px blue;
 	color: hsl(220,45%,80%);
+	
+
 }
 .navList{
 	margin-bottom: 20px;

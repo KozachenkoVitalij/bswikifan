@@ -56,3 +56,28 @@
 		text-decoration: none;
 	}
 }
+.custom-list {
+	padding-left: 0;
+    list-style: none;
+    font-family: Roboto Flex, sans-serif;
+    color:rgb(121, 0, 221);
+    padding-bottom:0px;
+    margin-top: 0;
+    margin-bottom:0;
+    li{
+    	padding: 10px;
+    }
+    b{
+    	color: hsl(220,35%,65%);
+    }
+}
+
+.custom-list li::before {
+    content: "•"; 
+    color: darkred;  
+    font-size: 1em;
+    margin-right: 8px;	
+}
+p1{
+	padding: 5px auto; 
+}
