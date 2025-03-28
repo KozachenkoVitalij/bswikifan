@@ -127,7 +127,7 @@ function toggleMore(){
 
 function toggleRandomPageHref(){
   const hrefPage = document.getElementById('random-link') 
-  const pages1 = [
+  const pages = [
    '../bswikifan.html',
   '../htmlHrefTitle/black-souls-about.html',
   '../htmlHrefTitle/alica-about.html',
