@@ -1,6 +1,8 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
   initTemplates();
-  
+ 
 });
 
 function loadTemplate(url, targetId) {
@@ -24,6 +26,7 @@ function initTemplates() {
 
     // Після завантаження всіх шаблонів викликаємо потрібні функції
     handleHoverIcons();
+     initialSearch();
   });
 }
 
@@ -68,34 +71,46 @@ function handleHoverIcons() {
   });
 };
 
-function toggleSearch() {
-  const search = document.querySelector('.search-tools');
 
-  if(search){
-    if(search.getAttribute('data-search') ==='hidden'){
-      search.setAttribute('data-search','visible');
+function initialSearch() {
+  const searchInput = document.querySelector('.search-input');
+  const searchResult = document.querySelector('.search-result');
+  const searchIcon = document.querySelector('.search-icon');
+  console.log(searchInput, searchResult, searchIcon);
+  const pagesList = [
+    { name: ['home', 'b', 'black', 'home'], url: '/bswikifan.html' },
+    { name: ['black souls I', 'b', 'black', '1'], url: '../htmlHrefTitle/black-souls-about.html' },
+    { name: ['Alice', 'A', 'Alice', 'Al'], url: '../htmlHrefTitle/alica-about.html' },
+    { name: ['Red hood', 'R', '', 'Hood', 'H'], url: '../htmlHrefTitle/red-hood.html' }
+  ];
+
+  // Функція пошуку
+  function search() {
+    const query = searchInput.value.toLowerCase().trim();
+    searchResult.innerHTML = '';
+
+    if (query) {
+      const filteredSites = pagesList.filter(site =>
+        site.name.some(n => n.toLowerCase().includes(query))
+      );
+
+      filteredSites.forEach(site => {
+        const div = document.createElement('div');
+        div.classList.add('search-item');
+        div.innerHTML = `<a href="${site.url}">${site.name[0]}</a>`;
+        searchResult.appendChild(div);      
+    });
     }
-    else{
-      search.setAttribute('data-search','hidden');
-    }
-  }else{
-    console.error('search не знайдено!');
   }
+
+
+  // Обробник події для введення тексту
+  searchInput.addEventListener('input', search);
+
+  // Обробник події для натискання на іконку
+  searchIcon.addEventListener('click', search);
 }
 
-function toggleMenu() {
-    const menu = document.querySelector('.menu-bar-container');
-    
-    if (menu) {
-        if (menu.getAttribute('data-menu') === 'hidden') {
-            menu.setAttribute('data-menu', 'visible');
-        } else {
-            menu.setAttribute('data-menu', 'hidden');
-        }
-    } else {
-        console.error('Меню не знайдено!');
-    }
-}
 function toggleMore(){
   const more = document.querySelector(".button-more-tools")
 
@@ -109,29 +124,16 @@ function toggleMore(){
      console.error('More не знайдено!');
   }
 }
-function toggleSetting(){
-  const setting = document.querySelector(".setting-tools")
-
-  if (setting) {
-    if (setting.getAttribute('data-setting') === 'hidden') {
-      setting.setAttribute('data-setting', 'visible')
-    }else{
-      setting.setAttribute('data-setting','hidden')
-    }
-  }else{
-     console.error('More не знайдено!');
-  }
-}
 
 function toggleRandomPageHref(){
-  const hrefPage = document.getElementById('random-link')
-
-  const pages = [
-    '/bswikifan.html',
-    '../htmlHrefTitle/black-souls-about.html',
-    '../htmlHrefTitle/alica-about.html',
-    '../htmlHrefTitle/red-hood.html'
+  const hrefPage = document.getElementById('random-link') 
+  const pages1 = [
+   '../bswikifan.html',
+  '../htmlHrefTitle/black-souls-about.html',
+  '../htmlHrefTitle/alica-about.html',
+   '../htmlHrefTitle/red-hood.html'
   ];
+
 
    const randomPage = pages[Math.floor(Math.random() * pages.length)];
 
@@ -139,4 +141,3 @@ function toggleRandomPageHref(){
             window.location.href = randomPage;
   console.log(randomPage);
 }
-

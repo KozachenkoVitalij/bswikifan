@@ -244,6 +244,24 @@
 		});	
 	</script>
 <script type="text/javascript" src="/Script/mainmenuAPI.js"></script>
+  <script>
+        function toggle(selector, attribute) {
+          const element = document.querySelector(selector);
+          if (element) {
+            if (element.getAttribute(attribute) === 'hidden') {
+              element.setAttribute(attribute, 'visible');
+            } else {
+              element.setAttribute(attribute, 'hidden');
+            }
+          } else {
+            console.error('Element not found!');
+          }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          initTemplates();
+        });
+</script>
 </body>
 
 </html>

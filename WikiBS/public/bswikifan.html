@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <title>BlackSouls Wiki fan for learn</title>
-
+  <meta name="keywords" content = 'Black Souls Wiki, homepage'>
   <link href="styles/style-mainmenu.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="styles/styles-template/style-template-footer-header.css">
 
@@ -112,7 +112,7 @@
   </main>
     <footer id="footer"></footer>
   
-     <script src="Script/mainmenuAPI.js" defer></script>
+   
      <script type="text/javascript">
        var aliceRedhoodSprite = document.querySelector(".Alice");
         var resetTimer = null; 
@@ -170,5 +170,25 @@
 
                               showGallery(1);  
      </script>     
+     <script>
+        function toggle(selector, attribute) {
+          const element = document.querySelector(selector);
+          if (element) {
+            if (element.getAttribute(attribute) === 'hidden') {
+              element.setAttribute(attribute, 'visible');
+            } else {
+              element.setAttribute(attribute, 'hidden');
+            }
+          } else {
+            console.error('Element not found!');
+          }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          initTemplates();
+        });
+</script>
+       
   </body>
+  <script src="Script/mainmenuAPI.js" defer></script>
 </html>

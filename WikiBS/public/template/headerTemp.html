@@ -1,10 +1,14 @@
 <div class="search-container">
     <div class="search-tools" data-search = 'hidden' data-search = 'visible'>
         <div class="input-flex">
-          <img class="iconTools hoverMouse" src="../template/templateFoto/loop.png">
-          <input class="search-input" type="text" name="Search">
+          <div class="search-icon">
+          <img class="iconTools " src="../template/templateFoto/loop.png" alt="Search">
+          </div>
+          <input class="search-input" placeholder="Введіть пошук...">
           <a href="#" id="random-link" onclick="toggleRandomPageHref()"><img class="hoverMouse" src="../images/toolsIcon/cube-icon.png"></a>
+
         </div>
+        <div class="search-result"></div>
     </div>
 </div>
 
@@ -46,12 +50,12 @@
         <a href="../bswikifan.html"><img class="iconTools hoverIcon" src="../template/templateFoto/iconwiki.gif" data-original ="../template/templateFoto/iconwiki.gif" data-hover ="../template/templateFoto/homeIcon.png"/> </a>
       </div> 
       <div class="headerToolsImages hoverMouse">  
-      <button class="menu-button-header" onclick="toggleSearch()"> 
+      <button class="menu-button-header" onclick="toggle('.search-tools', 'data-search')"> 
         <img src="../template/templateFoto/loop.png">
       </button>
       </div> 
       <div class="headerToolsImages hoverMouse" >
-        <button class="menu-button-header" onclick="toggleMenu()">
+        <button class="menu-button-header" onclick="toggle('.menu-bar-container','data-menu')">
             <img class="iconTools hoverIcon" src="../images/toolsIcon/menu-icon.png" data-original = "../images/toolsIcon/menu-icon.png" data-hover ="../images/toolsIcon/menu-icon-2.png">
         </button>
       </div>
@@ -59,16 +63,27 @@
 
      <section class="bottom-tool">
           <div class="headerToolsImages hoverMouse">
-            <button class="toolsButton" onclick="toggleSetting()">
+            <button class="toolsButton" onclick="toggle('.setting-tools','data-setting')">
             <img src="../images/toolsIcon/settingIcon.png">
             </button>
           </div>
            <div class="headerToolsImages hoverMouse">
+            <button class="toolsButton" onclick="toggle('.user-div','data-user')">
             <img src="../images/toolsIcon/userIcon.png">
+          </button>
           </div>
      </section>    
 
 </header> 
+<div class="user-conteiner">
+    <div class="user-div" data-user= 'hidden'>
+      <h3>User</h3>
+      <p1>Your IP adress will be publicly visible if you make</p1>
+      <hr>
+      <a href="#"><button>Create acount</button></a>
+      <button style="background-color:skyblue; color:black;">Log out</button>
+    </div>
+</div>
 <div class="setting-tools-contaoner">
   <div class="setting-tools" data-setting= "hidden" data-setting= "visible">
     <h>Text</h>
