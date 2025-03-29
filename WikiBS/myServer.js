@@ -28,6 +28,9 @@ app.get('/alice-about', (req, res) =>{
 app.get('/red-hood', (req,res) =>{
     res.sendFile(path.join(__dirname,'WikiBS/public/htmlHrefTitle/red-hood.html'));
 });
+app.get('/login-acount',(req,res)=>{
+    res.sendFile(path.join(__dirname,'WikiBS/public/htmlHrefTitle/login-acount.html'));
+});
 app.listen(port, () => {
     console.log(`Сервер запущено на http://localhost:${port}`);
 });

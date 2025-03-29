@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="/styles/style-mainmenu.css">
+	<link rel="stylesheet" type="text/css" href="/styles/styles-template/style-template-footer-header.css">
+	<link rel="stylesheet" type="text/css" href="/styles/created-acount-style.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+	<link rel="icon" type="img" href="/images/Character2dModel/AliceSprite.png" />
+
+</head>
+<body>
+	<header id="headerTemp" class="headerBarStyle"></header>
+
+	<header class="h1-content"><h1>Created acount</h1></header>
+	<main>
+	<section class="left-created-acount">
+		<form action="#">
+			<label for="username">Username</label>
+			<input type="text" name="username" id="username" placeholder="Enter your username"  autocomplete="username" required>
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" placeholder="Enter your password"  required autocomplete="new-password">
+			<label for="confirm-password">Confirm password</label>
+			<input type="password" name="confirm-password" id="confirm-password" placeholder="Enter your password" autocomplete="new-password" required>
+			<label for="email">Email(optinal)</label>
+			<input type="email" name="email" id="email" placeholder="Enter your Email if you want">
+			<label for="real-name">Real name (optional)</label>
+			<input type="text" name="real-name" id="real-name" placeholder="Enter your real name if you want">
+			<p1>Real name is optional. If you choose to provide it, this will be used for giving you attribution for your work. Also, by using a wiki hosted by Miraheze, you agree to the Terms of Use and accept the Privacy Policy.</p1>
+			<div class="checkbox">
+			<label >
+				<input class="checkbox-input" type="checkbox" name="agread" checked>
+				Agread Term Privacy Police
+			</label>
+			</div>
+			<div class="button">
+				<button id="button-submit">Crated your Acount</button>
+			</div>
+		</form>
+	</section>
+
+	<section class="some-info">
+		<h1>Black Souls wiki is made <br>by people like you<br><br><br>We happy see you hear</h1>	
+	</section>
+	</main>
+
+
+
+
+
+	<footer id="footer"></footer>
+</body>
+<script type="text/javascript">
+	let name = document.getElementById('username');
+	let password = document.getElementById('password');
+	let passwordConfirm = document.getElementById('confirm-password');
+	let submit = document.getElementById('button-submit');
+	let user = {}; 
+
+	function User(name, password) {
+		this.name = name;
+		this.password = password;
+	}
+	function createdId(user) {
+		return Object.keys(user).length + 1;
+	}
+
+	submit.addEventListener('click', (event) => {
+		event.preventDefault();
+
+		const userName = name.value.trim();
+		const passwordUser = password.value.trim();
+		const confirmPasswordUser = passwordConfirm.value.trim();
+
+		if (!userName || !passwordUser || !confirmPasswordUser) {
+			alert("Заповніть всі поля!");
+			return;
+		}
+		if (passwordUser !== confirmPasswordUser) {
+			alert("Паролі не збігаються! Будь ласка, введіть однакові паролі.");
+			return;
+		}
+		const newUser = new User(userName, passwordUser);
+		const userId = 'User' + createdId(user);
+
+		user[userId] = newUser;
+
+		console.log('Users:', user);
+	});
+</script>
+
+<script type="text/javascript" src="/Script/mainmenuAPI.js"></script>
+<script type="text/javascript">
+        function toggle(selector, attribute) {
+          const element = document.querySelector(selector);
+          if (element) {
+            if (element.getAttribute(attribute) === 'hidden') {
+              element.setAttribute(attribute, 'visible');
+            } else {
+              element.setAttribute(attribute, 'hidden');
+            }
+          } else {
+            console.error('Element not found!');
+          }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          initTemplates();
+        });
+</script>
+</html>

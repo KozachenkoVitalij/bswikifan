@@ -54,7 +54,6 @@ function handleHoverIcons() {
   const hoverIcons = document.querySelectorAll(".hoverIcon");
 
   // Перевірка на консоль
-  console.log("Знайдені елементи hoverIcon після завантаження:", hoverIcons);
 
   // Для кожного елемента з класом .hoverIcon додаємо події
   hoverIcons.forEach(function (hoverIcon) {
@@ -76,7 +75,7 @@ function initialSearch() {
   const searchInput = document.querySelector('.search-input');
   const searchResult = document.querySelector('.search-result');
   const searchIcon = document.querySelector('.search-icon');
-  console.log(searchInput, searchResult, searchIcon);
+
   const pagesList = [
     { name: ['home', 'b', 'black', 'home'], url: '/bswikifan.html' },
     { name: ['black souls I', 'b', 'black', '1'], url: '../htmlHrefTitle/black-souls-about.html' },
@@ -136,8 +135,5 @@ function toggleRandomPageHref(){
 
 
    const randomPage = pages[Math.floor(Math.random() * pages.length)];
-
-            // Переходимо на обрану сторінку
-            window.location.href = randomPage;
-  console.log(randomPage);
+            window.location.href = randomPage;;
 }
