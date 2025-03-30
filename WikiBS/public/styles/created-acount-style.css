@@ -15,12 +15,13 @@
 main{
 	display: flex;
 	padding: 100px;
-	border: solid 1px white;
+	
 	border-radius: 5px;
 	transform: translateY(-30px);
 }
 form{
 	padding-bottom:50px	;
+	text-align:left;
 	label{
 		display: block;
 		text-align: left;
@@ -30,6 +31,7 @@ form{
 		padding-top: 10px;
 	}
 	input{
+
 		height: 30px;
 		width: 384px;
 		padding: 5px;
@@ -48,7 +50,7 @@ form{
 	height: fit-content;
 	padding-top:30px;
 	button{
-		width: 100%;
+		width: 384px;
 		background-color: rgb(0, 147, 255);
 		border: none;
 		height: 30px;
@@ -69,7 +71,30 @@ form{
 }
 .some-info{
 	text-align: center;
-	img{
-		width:200px; height: 300px;
+}
+.login-complited{
+	text-align: center;
+	padding-bottom: 250px;
+	display: none;
+	button{
+		width: 100%;
+		font-size: 22px;
+		font-weight: bold;
+		a{
+		color: white;
+		text-decoration: none;
+		}
 	}
+}
+section[data-login='hidden']{
+	display: none;
+}
+section[data-login='visible']{
+	display: block;
+}
+section[data-login-On='hidden']{
+	display: none;
+}
+section[data-login-On='visible']{
+	display: block;
 }

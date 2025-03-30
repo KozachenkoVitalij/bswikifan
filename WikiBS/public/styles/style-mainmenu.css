@@ -8,6 +8,13 @@ body{
 	overflow-x:hidden ;
 	margin: 0;
 }
+body.bigger {
+    font-size: 1.5em; /* Збільшуємо розмір шрифту */
+}
+
+.bigger .content {
+    width: 90%; /* Робимо контейнер ширшим */
+}
 #spoiler{
 	color: hsl(220,45%,80%);
 	text-align: center;

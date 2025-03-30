@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   initTemplates();
- 
+
 });
 
 function loadTemplate(url, targetId) {
@@ -27,6 +27,7 @@ function initTemplates() {
     // Після завантаження всіх шаблонів викликаємо потрібні функції
     handleHoverIcons();
      initialSearch();
+
   });
 }
 
@@ -137,3 +138,6 @@ function toggleRandomPageHref(){
    const randomPage = pages[Math.floor(Math.random() * pages.length)];
             window.location.href = randomPage;;
 }
+
+console.log(localStorage);
+

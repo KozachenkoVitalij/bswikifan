@@ -83,3 +83,24 @@
 p1{
 	padding: 5px auto; 
 }
+.sinopsis-info{
+	width: fit-content;
+	display: flex;
+	justify-items: center;
+	button{
+		margin:30px auto;
+		width: 40px;
+		height: 40px;
+
+	}
+}
+.sinopsis-hidden{
+
+}
+section[data-sinopsis = 'visible']{
+	display: block;
+}
+section[data-sinopsis = 'hidden']{
+	display: none;
+}
+

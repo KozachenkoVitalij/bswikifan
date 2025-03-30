@@ -20,7 +20,7 @@
 	<header class="h1-content"><h1>Created acount</h1></header>
 	<main>
 	<section class="left-created-acount">
-		<form action="#">
+		<form>
 			<label for="username">Username</label>
 			<input type="text" name="username" id="username" placeholder="Enter your username"  autocomplete="username" required>
 			<label for="password">Password</label>
@@ -48,11 +48,6 @@
 		<h1>Black Souls wiki is made <br>by people like you<br><br><br>We happy see you hear</h1>	
 	</section>
 	</main>
-
-
-
-
-
 	<footer id="footer"></footer>
 </body>
 <script type="text/javascript">
@@ -86,9 +81,12 @@
 			return;
 		}
 		const newUser = new User(userName, passwordUser);
-		const userId = 'User' + createdId(user);
+		localStorage.setItem('user', JSON.stringify(newUser));
 
+		const userId = 'User' + createdId(user);
 		user[userId] = newUser;
+
+		window.location.href = "/htmlHrefTitle/login.html"
 
 		console.log('Users:', user);
 	});
